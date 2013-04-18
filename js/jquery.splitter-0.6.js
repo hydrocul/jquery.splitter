@@ -188,6 +188,7 @@
                             x < current_spliter.width()-limit) {
                             current_spliter.position(x);
                             current_spliter.find('.spliter_panel').trigger('spliter.resize');
+                            settings.onDrag(e);
                             return false;
                         }
                     } else if (current_spliter.orientation == 'horizontal') {
@@ -202,6 +203,7 @@
                             y < current_spliter.height()-limit) {
                             current_spliter.position(y);
                             current_spliter.trigger('spliter.resize');
+                            settings.onDrag(e);
                             return false;
                         }
                     }
